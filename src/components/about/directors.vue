@@ -1,8 +1,8 @@
 <template>
     <div class="container bg-jungle py-[102px] pb-[110px] px-[24px] xl:px-[165px] overflow-hidden relative">
         <h1 class="text-center text-[32px] font-bold text-white xl:text-[48px] aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">Meet the directors</h1>
-        <ul class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-[48px] xl:mt-[64px] md:gap-[11px] xl:gap-[30px]">
-            <li class="bg-state px-[24px] pt-[32px] pb-[56px] relative aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
+        <ul class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-[48px] xl:mt-[64px] md:gap-[11px] xl:gap-[30px] aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
+            <li class="bg-state px-[24px] pt-[32px] pb-[56px] relative " >
                 <div class="w-[96px] mx-auto">
                     <img src="../../assets/d1.svg" alt="d1">
                 </div>
@@ -12,7 +12,7 @@
                     <img src="../../assets/plus.svg" alt="plus">
                 </div>
             </li>
-            <li class="bg-state px-[24px] pt-[32px] pb-[56px] relative mt-[52px] md:mt-0 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
+            <li class="bg-state px-[24px] pt-[32px] pb-[56px] relative mt-[52px] md:mt-0">
                 <div class="w-[96px] mx-auto">
                     <img src="../../assets/d2.svg" alt="d2">
                 </div>
@@ -22,7 +22,7 @@
                     <img src="../../assets/plus.svg" alt="plus">
                 </div>
             </li>
-            <li class="bg-state px-[24px] pt-[32px] pb-[56px] relative mt-[52px] md:mt-[48px] xl:my-0 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
+            <li class="bg-state px-[24px] pt-[32px] pb-[56px] relative mt-[52px] md:mt-[48px] xl:my-0">
                 <div class="w-[96px] mx-auto">
                     <img src="../../assets/d3.svg" alt="d3">
                 </div>
@@ -32,7 +32,7 @@
                     <img src="../../assets/plus.svg" alt="plus">
                 </div>
             </li>
-            <li class="bg-state px-[24px] pt-[32px] pb-[56px] relative mt-[52px] md:mt-[48px] xl:mt-[48px] aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
+            <li class="bg-state px-[24px] pt-[32px] pb-[56px] relative mt-[52px] md:mt-[48px] xl:mt-[48px]">
                 <div class="w-[96px] mx-auto">
                     <img src="../../assets/d4.svg" alt="d4">
                 </div>
@@ -42,7 +42,7 @@
                     <img src="../../assets/plus.svg" alt="plus">
                 </div>
             </li>
-            <li class="bg-state px-[24px] pt-[32px] pb-[56px] relative mt-[52px] md:mt-[48px] xl:mt-[48px] aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
+            <li class="bg-state px-[24px] pt-[32px] pb-[56px] relative mt-[52px] md:mt-[48px] xl:mt-[48px]">
                 <div class="w-[96px] mx-auto">
                     <img src="../../assets/d5.svg" alt="d5">
                 </div>
@@ -52,7 +52,7 @@
                     <img src="../../assets/plus.svg" alt="plus">
                 </div>
             </li>
-            <li class="bg-state px-[24px] pt-[32px] pb-[56px] relative mt-[52px] md:mt-[48px] xl:mt-[48px] aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
+            <li class="bg-state px-[24px] pt-[32px] pb-[56px] relative mt-[52px] md:mt-[48px] xl:mt-[48px]">
                 <h2 class="text-center text-rapture text-[18px] font-bold mt-[16px]">Aden Allan</h2>
                 <h2 class="text-center text-white px-[22px] mt-[8px] text-[15px] font-semibold leading-[20px]">“Empowered teams create truly amazing products. Set the north star and let them follow it.”</h2>
                 <div class="flex items-center justify-center gap-[16px] mt-[24px]">
