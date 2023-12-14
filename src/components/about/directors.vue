@@ -8,7 +8,7 @@
                 </div>
                 <h2 class="text-center text-rapture text-[18px] font-bold mt-[16px]">Nikita Marks</h2>
                 <h2 class="text-center text-white italic text-[15px] font-semibold ">Founder & CEO</h2>
-                <div class="w-[56px] mx-auto absolute bottom-[-28px] left-[42%]">
+                <div class="w-[56px]  block mb-[-86px] mt-[86px] mx-auto">
                     <img src="../../assets/plus.svg" alt="plus">
                 </div>
             </li>
@@ -18,7 +18,7 @@
                 </div>
                 <h2 class="text-center text-rapture text-[18px] font-bold mt-[16px]">Cristian Duncan</h2>
                 <h2 class="text-center text-white italic text-[15px] font-semibold ">Co-founder & COO</h2>
-                <div class="w-[56px] mx-auto absolute bottom-[-28px] left-[42%]">
+                <div class="w-[56px] block mb-[-86px] mt-[86px] mx-auto">
                     <img src="../../assets/plus.svg" alt="plus">
                 </div>
             </li>
@@ -28,7 +28,7 @@
                 </div>
                 <h2 class="text-center text-rapture text-[18px] font-bold mt-[16px]">Cruz Hamer</h2>
                 <h2 class="text-center text-white italic text-[15px] font-semibold ">Co-founder & CTO</h2>
-                <div class="w-[56px] mx-auto absolute bottom-[-28px] left-[42%]">
+                <div class="w-[56px] block mb-[-86px] mt-[86px] mx-auto">
                     <img src="../../assets/plus.svg" alt="plus">
                 </div>
             </li>
@@ -38,7 +38,7 @@
                 </div>
                 <h2 class="text-center text-rapture text-[18px] font-bold mt-[16px]">Drake Heaton</h2>
                 <h2 class="text-center text-white italic text-[15px] font-semibold ">Business Development Lead</h2>
-                <div class="w-[56px] mx-auto absolute bottom-[-28px] left-[42%]">
+                <div class="w-[56px] block mb-[-86px] mt-[86px] mx-auto">
                     <img src="../../assets/plus.svg" alt="plus">
                 </div>
             </li>
@@ -48,13 +48,13 @@
                 </div>
                 <h2 class="text-center text-rapture text-[18px] font-bold mt-[16px]">Griffin Wise</h2>
                 <h2 class="text-center text-white italic text-[15px] font-semibold ">Lead Marketing</h2>
-                <div class="w-[56px] mx-auto absolute bottom-[-28px] left-[42%]">
+                <div class="w-[56px] block mb-[-86px] mt-[86px] mx-auto">
                     <img src="../../assets/plus.svg" alt="plus">
                 </div>
             </li>
             <li class="bg-state px-[24px] pt-[32px] pb-[56px] relative mt-[52px] md:mt-[48px] xl:mt-[48px] aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
                 <h2 class="text-center text-rapture text-[18px] font-bold mt-[16px]">Aden Allan</h2>
-                <h2 class="text-center text-white px-[22px] mt-[8px] text-[15px] font-semibold ">“Empowered teams create truly amazing products. Set the north star and let them follow it.”</h2>
+                <h2 class="text-center text-white px-[22px] mt-[8px] text-[15px] font-semibold leading-[20px]">“Empowered teams create truly amazing products. Set the north star and let them follow it.”</h2>
                 <div class="flex items-center justify-center gap-[16px] mt-[24px]">
                     <div>
                         <img src="../../assets/d-twitter.svg" alt="twitter">
@@ -63,7 +63,7 @@
                         <img src="../../assets/d-in.svg" alt="in">
                     </div>
                 </div>
-                <div class="w-[56px] mx-auto absolute bottom-[-28px] left-[42%]">
+                <div class="w-[56px] block mb-[-86px] mt-[86px] mx-auto">
                     <img src="../../assets/plus.svg" alt="plus">
                 </div>
             </li>

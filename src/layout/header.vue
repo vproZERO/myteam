@@ -28,7 +28,7 @@
             <img src="../assets/menu.svg" alt="menu">
         </button>
         <div v-if="isOpen"  class="fixed z-40 sm:hidden inset-0 bg-black bg-opacity-[50%] ">
-            <div class="bg-pblue w-[255px] absolute right-0 bottom-0 h-full">
+            <div class="transition ease-in-out delay-150 bg-pblue w-[255px] absolute right-0 bottom-0 h-full">
                 <button v-on:click="isOpen = !isOpen" class="absolute right-[25px] top-[56px]">
                     <img src="../assets/x.svg" alt="close">
                 </button>

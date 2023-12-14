@@ -1,5 +1,5 @@
 <template>
-    <div class="container bg-state xl:px-[165px] xl:py-[140px] py-[64px] px-[24px] relative xl:flex items-center justify-between">
+    <div class="container bg-state xl:px-[165px] xl:py-[140px] py-[64px] px-[24px] relative xl:flex items-center xl:gap-[125px] justify-between">
         <div class="absolute h-[244px] top-0 right-0 lg:hidden block">
             <img src="../../assets/build.svg" alt="build img">
         </div>
@@ -7,11 +7,40 @@
             <img src="../../assets/build.svg" alt="build img">
         </div>
         <div>
-            <span class="bg-coral block h-[4px] w-[50px]"></span>
-            <h1 class="text-white text-start font-bold text-[32px] w-[240px] mt-[32px] md:w-[445px] xl:text-[48px] xl:mt-[54px]">Build & manage distributed teams like no one else.</h1>
+            <span class="bg-coral block h-[4px] w-[50px] aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500"></span>
+            <h1 class="text-white text-start font-bold text-[32px] w-[240px] mt-[32px] md:w-[445px] xl:text-[48px] xl:mt-[54px] aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">Build & manage distributed teams like no one else.</h1>
         </div>
-        <div>
-            
+        <div class="mt-[56px]">
+            <div class="xl:flex items-center gap-[23px]">
+                <div class="w-[72px] mx-auto aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
+                    <img src="../../assets/ask1.svg" alt="ask">
+                </div>
+                <div>
+                    <h2 class="text-center text-coral text-[18px] font-bold mt-[16px] xl:text-start xl:mt-0 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">Experienced Individuals</h2>
+                    <p class="text-white text-center font-semibold text-[15px] mt-[8px] xl:text-start xl:mt-[16px] aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">Our network is made up of highly experienced professionals who are passionate about what they do.</p>
+
+                </div>
+            </div>
+            <div class="xl:flex items-center gap-[23px] lg:mt-[32px] mt-[42px]">
+                <div class="w-[72px] mx-auto aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
+                    <img src="../../assets/ask2.svg" alt="ask2">
+                </div>
+                <div>
+                    <h2 class="text-center text-coral text-[18px] font-bold mt-[16px] xl:text-start xl:mt-0 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">Easy to Implement</h2>
+                    <p class="text-white text-center font-semibold text-[15px] mt-[8px] xl:text-start xl:mt-[16px] aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">Our processes have been refined over years of implementation meaning our teams always deliver.</p>
+
+                </div>
+            </div>
+            <div class="xl:flex items-center gap-[23px] lg:mt-[32px] mt-[42px]">
+                <div class="w-[72px] mx-auto aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
+                    <img src="../../assets/ask3.svg" alt="ask2">
+                </div>
+                <div>
+                    <h2 class="text-center text-coral text-[18px] font-bold mt-[16px] xl:text-start xl:mt-0 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">Enhanced Productivity  </h2>
+                    <p class="text-white text-center font-semibold text-[15px] mt-[8px] xl:text-start xl:mt-[16px] aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">Our customized platform with in-built analytics helps you manage your distributed teams.</p>
+
+                </div>
+            </div>
         </div>
     </div>
 </template>

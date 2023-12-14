@@ -1,8 +1,8 @@
 <template>
     <div class="container bg-coral px-[24px] py-[83px]   sm:px-[40px] xl:px-[165px] relative">
         <div class="sm:flex items-center justify-between">
-            <h1 class="text-center text-state font-bold text-[32px] leading-[32px] xl:text-[48px] ">Ready to get started?</h1>
-            <button class="text-state border-[2px] border-state rounded-[24px] py-[10px] px-[33px] mx-auto sm:mx-0 block mt-[24px]">
+            <h1 class="text-center text-state font-bold text-[32px] leading-[32px] xl:text-[48px] aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">Ready to get started?</h1>
+            <button class="text-state border-[2px] border-state rounded-[24px] py-[10px] hover:bg-white hover:border-white font-semibold px-[33px] mx-auto sm:mx-0 block mt-[24px] aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
                 <router-link to="/contact">contact us</router-link>
             </button>
         </div>

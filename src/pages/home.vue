@@ -3,6 +3,7 @@
         <Header/>
         <Find/>
         <Build/>
+        <Delivery/>
         <Ready/>
         <Footer/>
     </div>
@@ -11,6 +12,7 @@
 import Header from '../layout/header.vue'
 import Find from '../components/home/find.vue'
 import Build from '../components/home/build.vue'
+import Delivery from '../components/home/delivery.vue'
 import Ready from '../layout/ready.vue'
 import Footer from '../layout/footer.vue'
 export default {
@@ -18,6 +20,7 @@ export default {
         Header,
         Find,
         Build,
+        Delivery,
         Ready,
         Footer
     }
