@@ -45,7 +45,7 @@
                     <input type="text" id="message" name="message" v-model="message" required>
                     <label for="name">Message</label>
                 </div>
-                <button class="text-jungle font-semibold text-[18px] py-[10px] bg-white rounded-[24px] px-[33px] ">submit</button>
+                <button @click="registerAction()" :disabled="isSubmitting" type="button" class="text-jungle font-semibold text-[18px] py-[10px] bg-white rounded-[24px] px-[33px] ">submit</button>
             </form>
         </div>
         <div class="w-[100px] absolute bottom-0 right-0">
@@ -54,8 +54,89 @@
     </div>
 </template>
 <script>
+import axios from 'axios'
+import Swal from 'sweetalert2'
 export default {
-    
+    name: "Ask",
+    data:() => {
+        return {
+            name: "",
+            email: "",
+            companyname: "",
+            title: "",
+            message: "",
+            validationErrors: {},
+            isSubmitting: false,
+        }
+    },
+    created() {
+        if ( 
+            localStorage.getItem("token") != "" &&
+            localStorage.getItem("token") != null
+        ) {
+            this.$router.push("/");
+            Swal.fire({
+                icon: "info",
+                title: "Siz registratsiyadan otkansiz!",
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
+    },
+    methods: {
+        logoutAction() {
+            this.isSubmitting = true;
+            let payload = {
+                name : this.name,
+                email : this.email,
+                companyname : this.companyname,
+                title : this.title,
+                message : this.message
+            };
+            axios
+                .post("https://fakestoreapi.com/users", payload)
+                .then((response) => {
+                    localStorage.setItem("token", response.data.token);
+                    this.$router.push("/");
+                    return response;
+                })
+                .catch((error) => {
+                    this.isSubmitting = false;
+                    if(error.response.data.errors != undefined) {
+                        this.validationErrors = error.response.data.errors;
+                    }
+                    if(error.response.data.error != undefined) {
+                        this.validationErrors = error.response.data.error
+                    }
+                    return error;
+                })
+        },
+        registerAction() {
+            this.isSubmitting = true;
+            let subPayload = {
+                name : this.name,
+                email : this.email,
+                companyname : this.companyname,
+                title : this.title,
+                message : this.message
+            };
+            axios
+                .post("https://fakestoreapi.com/users" , subPayload)
+                .then((res) => {
+                    localStorage.setItem("token" , res.data.token);
+                    this.$router.push("/");
+
+                    return res
+                })
+                .catch((err) => {
+                    this.isSubmitting = false;
+                    if(err.res.data.errors != undefined) {
+                        this.validationErrors = err.res.data.errors
+                    }
+                    return err
+                })
+        }
+    },
 }
 </script>
 <style lang="">
