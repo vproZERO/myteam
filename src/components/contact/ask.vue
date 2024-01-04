@@ -95,6 +95,20 @@ export default {
                 Swal.fire({
                     title: "Arizangiz muvafaqqiyatli yuborildi",
                     icon: "success",
+                    showClass: {
+                        popup: `
+                            animate__animated
+                            animate__fadeInUp
+                            animate__faster
+                        `
+                    },
+                    hideClass:{
+                        popup: `
+                            animate__animated
+                            animate__fadeOutDown
+                            animate__faster
+                        `
+                    },
                     showConfirmButton: false
                 })
             })
@@ -103,7 +117,21 @@ export default {
                 Swal.fire({
                     title: "Arizangiz yuborilmadi",
                     icon: "error",
-                    showConfirmButton: false
+                    showConfirmButton: false,
+                    showClass: {
+                        popup: `
+                            animate__animated
+                            animate__fadeInUp
+                            animate__faster
+                        `
+                    },
+                    hideClass:{
+                        popup: `
+                            animate__animated
+                            animate__fadeOutDown
+                            animate__faster
+                        `
+                    }
                 })
             })
         }
