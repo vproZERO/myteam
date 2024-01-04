@@ -109,6 +109,7 @@ export default {
                             animate__faster
                         `
                     },
+                    timer: 1500,
                     showConfirmButton: false
                 })
             })
@@ -117,6 +118,7 @@ export default {
                 Swal.fire({
                     title: "Arizangiz yuborilmadi",
                     icon: "error",
+                    timer: 1500,
                     showConfirmButton: false,
                     showClass: {
                         popup: `
