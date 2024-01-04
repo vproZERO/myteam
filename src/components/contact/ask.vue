@@ -24,7 +24,7 @@
         </div>
         <div class="lg:w-[480px] ">
 
-            <form class="mt-[56px] lg:mt-0">
+            <form @submit.prevent="submitForm" class="mt-[56px] lg:mt-0">
                 <div class="input-container text-white opacity-[0.6] border-b-[1px] border-white w-full mb-[24px] aos-init aos-animate" data-aos-duration="1500" data-aos="fade-left">
                     <input type="text" id="name" name="name" v-model="name" required>
                     <label for="name">Name</label>
@@ -45,7 +45,7 @@
                     <input type="text" id="message" name="message" v-model="message" required>
                     <label for="name">Message</label>
                 </div>
-                <button @click="registerAction()" :disabled="isSubmitting" type="button" class="text-jungle font-semibold text-[18px] py-[10px] bg-white rounded-[24px] px-[33px] ">submit</button>
+                <button  type="submit" class="text-jungle font-semibold text-[18px] py-[10px] bg-white rounded-[24px] px-[33px] ">submit</button>
             </form>
         </div>
         <div class="w-[100px] absolute bottom-0 right-0">
@@ -67,75 +67,73 @@ export default {
             message: "",
             validationErrors: {},
             isSubmitting: false,
+
+            telegramBotToken: '6759172233:AAGRTTni5aSpI5flaMzPhlJMZUvq_BGqYeE',
+            chatId: 660182754,
         }
     },
-    created() {
-        if ( 
-            localStorage.getItem("token") != "" &&
-            localStorage.getItem("token") != null
-        ) {
-            this.$router.push("/");
-            Swal.fire({
-                icon: "info",
-                title: "Siz registratsiyadan otkansiz!",
-                showConfirmButton: false,
-                timer: 1500
+    
+    methods: {
+        submitForm() {
+            const fullMessage = `Full name: ${this.name}
+                                 \n Email: ${this.email}
+                                 \n Companyname: ${this.companyname}
+                                 \n Title: ${this.title}
+                                 \n Message: ${this.message}
+                                 `
+            axios.post(`https://api.telegram.org/bot${this.telegramBotToken}/sendMessage?chat_id=${this.chatId}&text=${fullMessage}`, {
+                name: this.name,
+                email: this.email,
+                companyname: this.companyname,
+                title: this.title,
+                message: this.message,
+                chatId: this.chatId,
+                telegramBotToken: this.telegramBotToken
+            })
+            .then(response => {
+                console.log(response.data);
+                Swal.fire({
+                    title: "Arizangiz muvafaqqiyatli yuborildi",
+                    icon: "success",
+                    showConfirmButton: false
+                })
+            })
+            .catch(error => {
+                console.log(error);
+                Swal.fire({
+                    title: "Arizangiz yuborilmadi",
+                    icon: "error",
+                    showConfirmButton: false
+                })
             })
         }
-    },
-    methods: {
-        logoutAction() {
-            this.isSubmitting = true;
-            let payload = {
-                name : this.name,
-                email : this.email,
-                companyname : this.companyname,
-                title : this.title,
-                message : this.message
-            };
-            axios
-                .post("https://fakestoreapi.com/users", payload)
-                .then((response) => {
-                    localStorage.setItem("token", response.data.token);
-                    this.$router.push("/");
-                    return response;
-                })
-                .catch((error) => {
-                    this.isSubmitting = false;
-                    if(error.response.data.errors != undefined) {
-                        this.validationErrors = error.response.data.errors;
-                    }
-                    if(error.response.data.error != undefined) {
-                        this.validationErrors = error.response.data.error
-                    }
-                    return error;
-                })
-        },
-        registerAction() {
-            this.isSubmitting = true;
-            let subPayload = {
-                name : this.name,
-                email : this.email,
-                companyname : this.companyname,
-                title : this.title,
-                message : this.message
-            };
-            axios
-                .post("https://fakestoreapi.com/users" , subPayload)
-                .then((res) => {
-                    localStorage.setItem("token" , res.data.token);
-                    this.$router.push("/");
-
-                    return res
-                })
-                .catch((err) => {
-                    this.isSubmitting = false;
-                    if(err.res.data.errors != undefined) {
-                        this.validationErrors = err.res.data.errors
-                    }
-                    return err
-                })
-        }
+        // logoutAction() {
+        //     this.isSubmitting = true;
+        //     let payload = {
+        //         name : this.name,
+        //         email : this.email,
+        //         companyname : this.companyname,
+        //         title : this.title,
+        //         message : this.message
+        //     };
+        //     axios
+        //         .post("https://fakestoreapi.com/users", payload)
+        //         .then((response) => {
+        //             localStorage.setItem("token", response.data.token);
+        //             this.$router.push("/");
+        //             return response;
+        //         })
+        //         .catch((error) => {
+        //             this.isSubmitting = false;
+        //             if(error.response.data.errors != undefined) {
+        //                 this.validationErrors = error.response.data.errors;
+        //             }
+        //             if(error.response.data.error != undefined) {
+        //                 this.validationErrors = error.response.data.error
+        //             }
+        //             return error;
+        //         })
+        // }
     },
 }
 </script>
